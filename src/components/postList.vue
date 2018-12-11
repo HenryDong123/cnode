@@ -1,8 +1,6 @@
 <template>
   <div class="postList">
-    <div class="loading" v-if="isLoading">
-      <img src="../assets/loading.gif">
-    </div>
+    <Loading v-if="isLoading"></Loading>
     <div class="posts" v-else>
       <ul>
         <li>
@@ -50,6 +48,7 @@
 </template>
 
 <script>
+  import Loading from './Loading'
   export default {
     name: "postList",
     data() {
@@ -57,6 +56,9 @@
         isLoading: false,
         posts: []
       }
+    },
+    components:{
+      Loading
     },
     methods: {
       getData() {
@@ -82,6 +84,7 @@
 </script>
 
 <style scoped>
+
 
 
   .postList {
@@ -211,9 +214,6 @@
     text-decoration: underline;
   }
 
-  .loading {
-    text-align: center;
-    padding-top: 300px;
-  }
+
 
 </style>
