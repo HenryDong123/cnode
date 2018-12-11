@@ -19,39 +19,11 @@
 </script>
 
 <style scoped>
-  * {
-    margin: 0;
-    padding: 0;
-  }
 
-  * {
-    box-sizing: border-box;
-  }
-
-  *::after {
-    box-sizing: border-box;
-  }
-
-  *::before {
-    box-sizing: border-box;
-  }
-
-  ul, ol {
-    list-style: none;
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  input {
-    font: inherit;
-  }
 
   .header {
     background: #444444;
-    height: 51px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: space-between;
