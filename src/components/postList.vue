@@ -4,7 +4,7 @@
     <div class="posts" v-else>
       <ul>
         <li>
-        <div class="toobar">
+          <div class="toobar">
 
             <span>全部</span>
             <span>精华</span>
@@ -12,7 +12,7 @@
             <span>问答</span>
             <span>招聘</span>
 
-        </div>
+          </div>
         </li>
 
         <li v-for="post in posts">
@@ -35,7 +35,8 @@
           <router-link :to="{
             name:'pcontent',
             params:{
-              id:post.id
+              id:post.id,
+              name:post.author.loginname
             }
 
           }">
@@ -59,6 +60,7 @@
 
 <script>
   import Loading from './Loading'
+
   export default {
     name: "postList",
     data() {
@@ -67,7 +69,7 @@
         posts: []
       }
     },
-    components:{
+    components: {
       Loading
     },
     methods: {
@@ -94,7 +96,6 @@
 </script>
 
 <style scoped>
-
 
 
   .postList {
@@ -223,7 +224,6 @@
   a:hover {
     text-decoration: underline;
   }
-
 
 
 </style>

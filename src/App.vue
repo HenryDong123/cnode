@@ -2,7 +2,9 @@
   <div id="app">
     <Header></Header>
     <div class="main">
+      <router-view name="Aside"></router-view>
       <router-view name="main"></router-view>
+
     </div>
   </div>
 </template>

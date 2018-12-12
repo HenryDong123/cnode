@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import postList from '../components/postList'
 import Article from '../components/Article'
 import userinfo from '../components/userinfo'
+import Aside from '../components/Aside'
 Vue.use(Router)
 
 export default new Router({
@@ -16,9 +17,11 @@ export default new Router({
     },
     {
       name:'pcontent',
-      path:'/topic/:id',
+      path:'/topic/:id&author=:name',
       components:{
-        main:Article
+        main:Article,
+        Aside:Aside
+
       }
     },
     {
