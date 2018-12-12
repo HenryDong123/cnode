@@ -48,7 +48,7 @@
           {{index+1}}楼
         </span>
             <span v-if="reply.ups.length>0">
-          ☝ {{reply.ups.length}}
+               赞 {{reply.ups.length}}
         </span>
             <span v-else>
         </span>
@@ -102,7 +102,7 @@
   .topbar {
     padding: 10px;
     background-color: #f6f6f6;
-    height: 16px;
+    height: 42px;
     font-size: 12px;
     margin-top: 10px;
   }
@@ -118,6 +118,7 @@
 
   #reply {
     margin-top: 15px;
+
   }
 
   #reply img {
@@ -172,6 +173,10 @@
 
   .markdown-text img {
     width: 92% !important;
+  }
+  .markdown-text p{
+    font-size: 15px;
+    margin: 5px;
   }
 
 
