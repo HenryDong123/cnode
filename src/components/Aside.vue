@@ -16,7 +16,7 @@
       <ul>
         <li v-for="list in topcilimitby5">
           <router-link :to="{
-        name:'post_content',
+        name:'pcontent',
         params:{
           id:list.id,
           name:list.author.loginname
@@ -32,7 +32,7 @@
       <ul>
         <li v-for="list in replylimitby5">
           <router-link :to="{
-        name:'post_content',
+        name:'pcontent',
         params:{
           id:list.id,
           name:list.author.loginname

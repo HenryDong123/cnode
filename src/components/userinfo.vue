@@ -18,7 +18,7 @@
         <ul>
           <li v-for="item in userinfo.recent_topics">
             <router-link :to="{
-              name:'post_content',
+              name:'pcontent',
               params:{
               id:item.id
               }
@@ -33,7 +33,7 @@
         <ul>
           <li v-for="item in userinfo.recent_replies">
             <router-link :to="{
-              name:'post_content',
+              name:'pcontent',
               params:{
               id:item.id
               }

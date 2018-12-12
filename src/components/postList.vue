@@ -51,6 +51,10 @@
             {{post.last_reply_at | formatDate}}
           </span>
         </li>
+        <li>
+          <!--分页-->
+          <pagiNation @handleList="renderList"></pagiNation>
+        </li>
       </ul>
     </div>
 
@@ -60,23 +64,29 @@
 
 <script>
   import Loading from './Loading'
+  import pagiNation from './pageNation'
 
   export default {
     name: "postList",
     data() {
       return {
         isLoading: false,
-        posts: []
+        posts: [],
+        postpage:1
       }
     },
     components: {
-      Loading
+      Loading,
+      pagiNation
     },
     methods: {
       getData() {
         this.$http.get('https://cnodejs.org/api/v1/topics', {
-          page: 1,
-          limit: 40
+          params:{
+            page: this.postpage,
+            limit: 40
+          }
+
         }).then((res) => {
           console.log(res)
           this.isLoading = false
@@ -84,7 +94,12 @@
         }, (err) => {
           alert(err)
         })
+      },
+      renderList(value){
+        this.postpage = value;
+        this.getData();
       }
+
     },
     beforeMount() {
       this.isLoading = true

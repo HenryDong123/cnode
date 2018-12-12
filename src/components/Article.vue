@@ -92,6 +92,11 @@
     beforeMount() {
       this.isLoading = true
       this.getArticle()
+    },
+    watch:{
+      '$route'(to,from){
+        this.getArticle()
+      }
     }
   }
 </script>
