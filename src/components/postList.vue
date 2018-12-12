@@ -32,9 +32,19 @@
             </span>
           </span>
           <!--标题-->
-          <span>
+          <router-link :to="{
+            name:'pcontent',
+            params:{
+              id:post.id
+            }
+
+          }">
+
+            <span>
             {{post.title}}
-          </span>
+            </span>
+          </router-link>
+
           <!--最新回复-->
           <span class="last_reply">
             {{post.last_reply_at | formatDate}}

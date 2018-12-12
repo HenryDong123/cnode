@@ -2,7 +2,7 @@
   <div id="app">
     <Header></Header>
     <div class="main">
-      <postList></postList>
+      <router-view name="main"></router-view>
     </div>
   </div>
 </template>
@@ -21,6 +21,7 @@
 </script>
 
 <style>
+
   * {
     margin: 0;
     padding: 0;
@@ -53,8 +54,6 @@
   body{
     background: #e1e1e1;
   }
-  main{
 
-  }
 
 </style>
