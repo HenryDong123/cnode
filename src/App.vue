@@ -55,7 +55,12 @@
   }
   body{
     background: #e1e1e1;
-  }
 
+  }
+  .main{
+    max-width: 1344px;
+    margin: 0 auto;
+
+  }
 
 </style>

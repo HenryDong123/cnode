@@ -14,7 +14,7 @@
 <script>
   import $ from 'jquery'
   export default {
-    name: "pageNation.vue",
+    name: "pageNation",
     data() {
       return {
         pagebtns: [1, 2, 3, 4, 5, '......'],
